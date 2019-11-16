@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        .a {
+            color: #ccc;
+        }
+
+        .b {
+            padding: 10px;
+        }
+
+        .c {
+            background: red;
+        }
+
+        .test {
+            @extend .a;
+            @extend .b;
+        }
+
+        .test:nth-child(2n+1) {
+            @extend .test;
+            @extend .c;
+        }
+    </style>
+    <style>
+        .a2 {
+            color: #cAc;
+        }
+
+        .b2 {
+            padding: 10px;
+        }
+
+        .c2 {
+            background: yellowgreen;
+        }
+
+        .test2 {
+            @extend .a2;
+            @extend .b2;
+        }
+
+        .test2:nth-child(2n+1) {
+            @extend .test2;
+            @extend .c2;
+        }
+
+        @aliases() {
+            .moje-wyniki: "row";
+            .moje-wyniki--record: "col-12 col-sm-6 col-lg-3 mx-md-n5";
+            .moje-wyniki--record: "col-12 col-sm-6 col-lg-3 mx-md-n5";
+        }
+
+        @aliases() {
+            .moje-wyniki2: "row";
+            .moje-wyniki--record2: "col-12 col-sm-6 col-lg-3 mx-md-n5";
+            .moje-wyniki--record2: "col-12 col-sm-6 col-lg-3 mx-md-n5";
+        }
+
+        .moje-wyniki--record {
+            background: yellowgreen;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="test">1</div>
+    <div class="test">1</div>
+    <div class="test">1</div>
+    <div class="test">1</div>
+    <div class="test2">1</div>
+    <div class="test2">1</div>
+    <div class="row">
+        <div class="col-12 col-sm-6 col-lg-3">1</div>
+        <div class="col-12 col-sm-6 col-lg-3">1</div>
+        <div class="col-12 col-sm-6 col-lg-3">1</div>
+    </div>
+    <div class="moje-wyniki">
+        <div class="moje-wyniki--record">2</div>
+        <div class="moje-wyniki--record">2</div>
+        <div class="moje-wyniki--record">2</div>
+        <div class="moje-wyniki--record">2</div>
+        <div class="moje-wyniki--record">2</div>
+    </div>
+    <script src="./dist/bundle.js"></script>
+    <script>
+        cssExtendModule.run();
+    </script>
+</body>
+</html>
