@@ -4,9 +4,9 @@ This is a very small library for styles manipulation. Base extend is css aliases
 How it's work?
 
 ## Example
-For exmaple we have  one DIV with class 'row' from bootstrap css and three columns inside this. 
+For example we have  one DIV with class 'row' from bootstrap css and three columns inside this. 
 Such a record tells us nothing, we do not know what it is.
-But we will need nameing this component for example product-list and any inside DIV paroduct-list--product
+But we will need to name this component for example product-list and any inside DIV product-list--product
 
      <div class="row">
         <div class="col-12 col-sm-6 col-lg-3">Product</div>
@@ -17,9 +17,9 @@ But we will need nameing this component for example product-list and any inside 
 To work!
 
     <div class="product-list row">
-        <div class="paroduct-list--product col-12 col-sm-6 col-lg-3">Product</div>
-        <div class="paroduct-list--product col-12 col-sm-6 col-lg-3">Product</div>
-        <div class="paroduct-list--product col-12 col-sm-6 col-lg-3">Product</div>
+        <div class="product-list--product col-12 col-sm-6 col-lg-3">Product</div>
+        <div class="product-list--product col-12 col-sm-6 col-lg-3">Product</div>
+        <div class="product-list--product col-12 col-sm-6 col-lg-3">Product</div>
     </div>
     
 It's better now because we can know what a component is, but it's not a good look.
@@ -34,8 +34,8 @@ To improve the record even better, we can use css aliases.
     </style>
     <body>
 	    <div class="product-list">
-	        <div class="paroduct-list--product">Product</div>
-	        <div class="paroduct-list--product">Product</div>
-	        <div class="paroduct-list--product">Product</div>
+	        <div class="product-list--product">Product</div>
+	        <div class="product-list--product">Product</div>
+	        <div class="product-list--product">Product</div>
 	    </div>
     </body>
