@@ -13,6 +13,7 @@ But we will need nameing this component for example product-list and any inside 
         <div class="col-12 col-sm-6 col-lg-3">Product</div>
         <div class="col-12 col-sm-6 col-lg-3">Product</div>
     </div>
+    
 To work!
 
     <div class="product-list row">
@@ -20,7 +21,8 @@ To work!
         <div class="paroduct-list--product col-12 col-sm-6 col-lg-3">Product</div>
         <div class="paroduct-list--product col-12 col-sm-6 col-lg-3">Product</div>
     </div>
-Better now, we can know what component it is, but this is not good look.
+    
+It's better now because we can know what a component is, but it's not a good look.
 To improve the record even better, we can use css aliases.
 
     <style>
