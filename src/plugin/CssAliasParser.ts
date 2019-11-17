@@ -8,9 +8,6 @@
 import PluginInterface from "./PluginInterface";
 
 export default class CssAliasParser implements PluginInterface {
-
-    private styles: Array<CSSStyleSheet> = new Array<CSSStyleSheet>();
-
     /**
      * @param rulesText
      * @param _styleObject

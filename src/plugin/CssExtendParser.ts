@@ -43,9 +43,7 @@ export default class CssExtendParser implements PluginInterface {
         return new RegExp(`(${classRule}+)\\s*{\\s*(\\s*@extend\\s+${classRule}+\\s*;\\s*)+}`, 'gmi');
     }
 
-    private getClassRule(): string {
-        return '[\\.\\-_a-zA-Z0-9\\:\\(\\)\\+]';
-    }
+    private getClassRule = (): string => '[\\.\\-_a-zA-Z0-9\\:\\(\\)\\+]';
 
     private getIndexStyleClass(style: CSSStyleSheet, className: string): number {
         const classes: CSSRuleList = this.getClasses(style);
@@ -99,7 +97,5 @@ export default class CssExtendParser implements PluginInterface {
         return classItem;
     }
 
-    private getClasses(style: CSSStyleSheet): CSSRuleList {
-        return style.rules || style.cssRules;
-    }
+    private getClasses = (style: CSSStyleSheet): CSSRuleList => style.rules || style.cssRules;
 }
